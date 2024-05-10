@@ -1,0 +1,1778 @@
+{
+	"tables": {
+		"788dc565-f243-4de2-bab8-222aaefd65ef": {
+			"id": "788dc565-f243-4de2-bab8-222aaefd65ef",
+			"visible": true,
+			"name": "departments",
+			"desc": "",
+			"estimatedSize": "",
+			"cols": [
+				{
+					"id": "84d64450-6a65-46d4-96f4-f709b8587439",
+					"name": "_id",
+					"datatype": "objectId",
+					"param": "",
+					"pk": true,
+					"nn": true,
+					"list": false,
+					"comment": "",
+					"data": "",
+					"enum": "",
+					"validation": "",
+					"pattern": false,
+					"estimatedSize": "",
+					"any": ""
+				},
+				{
+					"id": "98cc640a-abb4-4948-bed1-06b4adacae2d",
+					"name": "name",
+					"datatype": "string",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"list": false,
+					"comment": "",
+					"data": "",
+					"enum": "",
+					"validation": "maxLength: 50",
+					"pattern": false,
+					"estimatedSize": "",
+					"any": ""
+				},
+				{
+					"id": "4c1c0da8-412f-48a2-80f9-ded220ee7d08",
+					"name": "abbreviation",
+					"datatype": "string",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"list": false,
+					"comment": "",
+					"data": "",
+					"enum": "",
+					"validation": "maxLength: 6",
+					"pattern": false,
+					"estimatedSize": "",
+					"any": ""
+				},
+				{
+					"id": "94918d7e-da30-405d-994e-4210ddf5d6b0",
+					"name": "chairname",
+					"datatype": "string",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"list": false,
+					"comment": "",
+					"data": "",
+					"enum": "",
+					"validation": "maxLength: 80",
+					"pattern": false,
+					"estimatedSize": "",
+					"any": ""
+				},
+				{
+					"id": "a62a3b15-4be6-42ca-b502-55a75d4f70f9",
+					"name": "building",
+					"datatype": "enum",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"list": false,
+					"comment": "",
+					"data": "",
+					"enum": "['ANAC', 'CDC', 'DC', 'ECS', 'EN2', 'EN3', 'EN4', 'EN5', 'ET', 'HSCI', 'NUR', 'VEC']",
+					"validation": "",
+					"pattern": false,
+					"estimatedSize": "",
+					"any": ""
+				},
+				{
+					"id": "3360971e-9a78-48a1-96c4-2bf38d76c442",
+					"name": "office",
+					"datatype": "int",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"list": false,
+					"comment": "",
+					"data": "",
+					"enum": "",
+					"validation": "",
+					"pattern": false,
+					"estimatedSize": "",
+					"any": ""
+				},
+				{
+					"id": "bbc1c8d5-a6d1-40b0-949f-be2daefe561d",
+					"name": "description",
+					"datatype": "string",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"list": false,
+					"comment": "",
+					"data": "",
+					"enum": "",
+					"validation": "maxLength: 80",
+					"pattern": false,
+					"estimatedSize": "",
+					"any": ""
+				},
+				{
+					"id": "b04d9cdd-47a7-474d-bab5-260cf53d0fa3",
+					"name": "courses",
+					"datatype": "objectId",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"list": true,
+					"comment": "",
+					"data": "",
+					"enum": "",
+					"validation": "",
+					"pattern": false,
+					"estimatedSize": "",
+					"any": ""
+				}
+			],
+			"relations": [
+				"3723db7c-b9c1-4d5c-8ae0-74b00088b0e3",
+				"f18556f6-59d4-4a47-a4db-a4a4288d3b14"
+			],
+			"lines": [
+				"4165c781-5392-47a0-b7ba-8ad34893f168"
+			],
+			"keys": [
+				{
+					"id": "780e60c2-9bbf-4aac-ad94-0c086b9e9d36",
+					"name": "Primary",
+					"isPk": true,
+					"cols": [
+						{
+							"id": "e8c9d7db-f11d-4e03-ba67-b048b67d9ac1",
+							"colid": "84d64450-6a65-46d4-96f4-f709b8587439"
+						}
+					]
+				},
+				{
+					"id": "4b3be6fe-6e79-45c7-9969-2c14c9365c43",
+					"isPk": false,
+					"name": "departments_ai_1",
+					"cols": []
+				}
+			],
+			"indexes": [
+				{
+					"id": "766f71bf-78b4-417b-8c99-1800ebf7bb63",
+					"name": "departments_uk_01",
+					"mongodb": {
+						"options": "{\nname: \"departments_uk_01\",\nunique: true\n}",
+						"fields": "{\n\"name\": 1\n}"
+					},
+					"cols": []
+				},
+				{
+					"id": "8dd3d423-7200-4772-90b6-6896c078b875",
+					"name": "departments_uk_02",
+					"mongodb": {
+						"options": "{\nname: \"departments_uk_02\",\nunique: true\n}",
+						"fields": "{\n\"abbreviation\": 1\n}"
+					},
+					"cols": []
+				},
+				{
+					"id": "0b21e1b0-71e7-4faf-98e5-0d5bc819eeec",
+					"name": "departments_uk_03",
+					"mongodb": {
+						"options": "{\nname: \"departments_uk_03\",\nunique: true\n}",
+						"fields": "{\n\"chairname\": 1\n}"
+					},
+					"cols": []
+				},
+				{
+					"id": "824e9f4d-38fe-4b6d-bd0c-139a0863ccd5",
+					"name": "departments_uk_04",
+					"mongodb": {
+						"options": "{\nname: \"departments_uk_04\",\nunique: true\n}",
+						"fields": "{\n\"building\": 1,\n\"office\": 1\n}"
+					},
+					"cols": []
+				}
+			],
+			"embeddable": false,
+			"generate": true,
+			"generateCustomCode": true,
+			"customCode": "",
+			"beforeScript": "",
+			"afterScript": "",
+			"validationLevel": "na",
+			"validationAction": "na",
+			"collation": "",
+			"others": "",
+			"size": "",
+			"max": "",
+			"validation": "",
+			"capped": false
+		},
+		"43d085f9-f05e-4eae-8065-cad50524d7c8": {
+			"id": "43d085f9-f05e-4eae-8065-cad50524d7c8",
+			"visible": true,
+			"name": "courses",
+			"desc": "",
+			"estimatedSize": "",
+			"cols": [
+				{
+					"id": "f4acb995-7986-4dce-bf3e-9011432b9e68",
+					"name": "_id",
+					"datatype": "objectId",
+					"param": "",
+					"pk": true,
+					"nn": true,
+					"list": false,
+					"comment": "",
+					"data": "",
+					"enum": "",
+					"validation": "",
+					"pattern": false,
+					"estimatedSize": "",
+					"any": ""
+				},
+				{
+					"id": "1ed7dfc6-90af-4092-bf85-fce1a2776d1d",
+					"name": "department",
+					"datatype": "objectId",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"list": false,
+					"comment": "",
+					"data": "",
+					"enum": "",
+					"validation": "",
+					"pattern": false,
+					"estimatedSize": "",
+					"any": "",
+					"fk": true
+				},
+				{
+					"id": "ad6346f7-85b3-4b12-8310-e0723bcee34b",
+					"name": "coursename",
+					"datatype": "string",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"list": false,
+					"comment": "",
+					"data": "",
+					"enum": "",
+					"validation": "maxLength: 50",
+					"pattern": false,
+					"estimatedSize": "",
+					"any": ""
+				},
+				{
+					"id": "14ea9939-1b25-4876-812c-dfeac72643a7",
+					"name": "coursenumber",
+					"datatype": "int",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"list": false,
+					"comment": "",
+					"data": "",
+					"enum": "",
+					"validation": "minimum:100,\nmaximum:700",
+					"pattern": false,
+					"estimatedSize": "",
+					"any": ""
+				},
+				{
+					"id": "ee0a7150-d6cf-468f-b344-4095c0c75f84",
+					"name": "description",
+					"datatype": "string",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"list": false,
+					"comment": "",
+					"data": "",
+					"enum": "",
+					"validation": "maxLength: 80",
+					"pattern": false,
+					"estimatedSize": "",
+					"any": ""
+				},
+				{
+					"id": "29e8a4e0-042f-4f93-82ca-f4112f648388",
+					"name": "units",
+					"datatype": "int",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"list": false,
+					"comment": "",
+					"data": "",
+					"enum": "",
+					"validation": "minimum: 1,\nmaximum: 5",
+					"pattern": false,
+					"estimatedSize": "",
+					"any": ""
+				},
+				{
+					"id": "6ead57db-c4cc-4679-aa57-e423ae18d875",
+					"name": "sections",
+					"datatype": "objectId",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"list": true,
+					"comment": "",
+					"data": "",
+					"enum": "",
+					"validation": "",
+					"pattern": false,
+					"estimatedSize": "",
+					"any": ""
+				}
+			],
+			"relations": [
+				"3723db7c-b9c1-4d5c-8ae0-74b00088b0e3",
+				"ee5fd3a5-def2-4839-961b-5f209d95ee39"
+			],
+			"lines": [
+				"4a4e9c03-0c7d-47b1-9369-38cc2c7b1de0",
+				"4165c781-5392-47a0-b7ba-8ad34893f168"
+			],
+			"keys": [
+				{
+					"id": "b5bd1f6d-bb44-4cb0-b49a-1b770b87b01d",
+					"name": "Primary",
+					"isPk": true,
+					"cols": [
+						{
+							"id": "009eff67-69df-4208-a329-0efaac77d3df",
+							"colid": "f4acb995-7986-4dce-bf3e-9011432b9e68"
+						}
+					]
+				}
+			],
+			"indexes": [
+				{
+					"id": "57cba04b-fdd3-4934-9b19-e115cb523834",
+					"name": "courses_uk_01",
+					"mongodb": {
+						"options": "{\nname: \"courses_uk_01\",\nunique: true\n}",
+						"fields": "{\n\"coursename\": 1\n}"
+					},
+					"cols": []
+				},
+				{
+					"id": "a68f1f1c-557e-4205-b671-b8f0a4bf2c4b",
+					"name": "courses_uk_02",
+					"mongodb": {
+						"options": "{\nname: \"courses_uk_02\",\nunique: true\n}",
+						"fields": "{\n\"department\": 1,\n\"coursenumber\": 1\n}"
+					},
+					"cols": []
+				}
+			],
+			"embeddable": false,
+			"generate": true,
+			"generateCustomCode": true,
+			"customCode": "",
+			"beforeScript": "",
+			"afterScript": "",
+			"validationLevel": "na",
+			"validationAction": "na",
+			"collation": "",
+			"others": "",
+			"size": "",
+			"max": "",
+			"validation": "",
+			"capped": false
+		},
+		"75c2400a-c5a2-49e7-80e9-cddd904e2d18": {
+			"id": "75c2400a-c5a2-49e7-80e9-cddd904e2d18",
+			"visible": true,
+			"name": "sections",
+			"desc": "",
+			"estimatedSize": "",
+			"cols": [
+				{
+					"id": "8ea90fca-b916-4443-84fd-c0965b5a79c6",
+					"name": "_id",
+					"datatype": "objectId",
+					"param": "",
+					"pk": true,
+					"nn": true,
+					"list": false,
+					"comment": "",
+					"data": "",
+					"enum": "",
+					"validation": "",
+					"pattern": false,
+					"estimatedSize": "",
+					"any": ""
+				},
+				{
+					"id": "c68bc9c4-cccc-43ac-a48d-1f474f18d6aa",
+					"name": "course",
+					"datatype": "objectId",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"list": false,
+					"comment": "",
+					"data": "",
+					"enum": "",
+					"validation": "",
+					"pattern": false,
+					"estimatedSize": "",
+					"any": "",
+					"fk": true
+				},
+				{
+					"id": "e119560d-694b-4bb8-bba6-f1d3a129ced8",
+					"name": "sectionnumber",
+					"datatype": "int",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"list": false,
+					"comment": "",
+					"data": "",
+					"enum": "",
+					"validation": "",
+					"pattern": false,
+					"estimatedSize": "",
+					"any": ""
+				},
+				{
+					"id": "f3a88ef0-f705-496c-9654-76d3f60d189c",
+					"name": "semester",
+					"datatype": "enum",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"list": false,
+					"comment": "",
+					"data": "",
+					"enum": "['Fall', 'Winter', 'Spring', 'Summer I', 'Summer II']",
+					"validation": "",
+					"pattern": false,
+					"estimatedSize": "",
+					"any": ""
+				},
+				{
+					"id": "8841b3d0-75ea-4eaf-896b-7b7ae3812821",
+					"name": "sectionyear",
+					"datatype": "int",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"list": false,
+					"comment": "",
+					"data": "",
+					"enum": "",
+					"validation": "",
+					"pattern": false,
+					"estimatedSize": "",
+					"any": ""
+				},
+				{
+					"id": "a41f291f-e95e-4c2e-9a08-734c009446b5",
+					"name": "building",
+					"datatype": "enum",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"list": false,
+					"comment": "",
+					"data": "",
+					"enum": "['ANAC', 'CDC', 'DC', 'ECS', 'EN2', 'EN3', 'EN4', 'EN5', 'ET', 'HSCI', 'NUR', 'VEC']",
+					"validation": "",
+					"pattern": false,
+					"estimatedSize": "",
+					"any": ""
+				},
+				{
+					"id": "c9d4b7e5-491f-4d1f-9e02-7483b8b41d9f",
+					"name": "room",
+					"datatype": "int",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"list": false,
+					"comment": "",
+					"data": "",
+					"enum": "",
+					"validation": "minimum: 1,\nmaximum: 1000",
+					"pattern": false,
+					"estimatedSize": "",
+					"any": ""
+				},
+				{
+					"id": "be1288de-2165-495b-adac-768d976e988b",
+					"name": "schedule",
+					"datatype": "enum",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"list": false,
+					"comment": "",
+					"data": "",
+					"enum": "['MW', 'TuTh', 'MWF', 'MTuWTh', 'F', 'S']",
+					"validation": "",
+					"pattern": false,
+					"estimatedSize": "",
+					"any": ""
+				},
+				{
+					"id": "8c5096b2-3463-4b23-99c0-3b8af03928cc",
+					"name": "starttime",
+					"datatype": "string",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"list": false,
+					"comment": "",
+					"data": "",
+					"enum": "",
+					"validation": "",
+					"pattern": false,
+					"estimatedSize": "",
+					"any": ""
+				},
+				{
+					"id": "26f66596-c87b-4237-84da-3ef758ce1046",
+					"name": "instructor",
+					"datatype": "string",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"list": false,
+					"comment": "",
+					"data": "",
+					"enum": "",
+					"validation": "maxLength: 50",
+					"pattern": false,
+					"estimatedSize": "",
+					"any": ""
+				},
+				{
+					"id": "3e1d1194-5763-479a-a5da-eee513fa0b11",
+					"name": "enrollment",
+					"datatype": "objectId",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"list": true,
+					"comment": "",
+					"data": "",
+					"enum": "",
+					"validation": "",
+					"pattern": false,
+					"estimatedSize": "",
+					"any": ""
+				}
+			],
+			"relations": [
+				"ee5fd3a5-def2-4839-961b-5f209d95ee39",
+				"ede643fd-ba27-4ad7-9cc7-d9719af605d2"
+			],
+			"lines": [
+				"a4ee5294-b51c-4117-b68b-7ed278771433",
+				"4a4e9c03-0c7d-47b1-9369-38cc2c7b1de0"
+			],
+			"keys": [
+				{
+					"id": "df486755-38ae-4063-8095-8fbb7cd05ec9",
+					"name": "Primary",
+					"isPk": true,
+					"cols": [
+						{
+							"id": "b7bce54b-cd74-44a5-80de-eb68a55a19a8",
+							"colid": "8ea90fca-b916-4443-84fd-c0965b5a79c6"
+						}
+					]
+				}
+			],
+			"indexes": [
+				{
+					"id": "1181a5c4-c839-48a6-a215-0c52590f32b2",
+					"name": "sections_uk_01",
+					"mongodb": {
+						"options": "{\nname: \"sections_uk_01\",\nunique: true\n}",
+						"fields": "{\n\"sectionyear\": 1,\n\"semester\": 1,\n\"starttime\": 1,\n\"building\": 1,\n\"room\": 1\n}"
+					},
+					"cols": []
+				},
+				{
+					"id": "9b8e3e4b-5743-4178-90d7-c996f5b14d0b",
+					"name": "sections_uk_02",
+					"mongodb": {
+						"options": "{\nname: \"sections_uk_02\",\nunique: true\n}",
+						"fields": "{\n\"sectionyear\": 1,\n\"semester\": 1,\n\"schedule\": 1,\n\"starttime\": 1,\n\"instructor\": 1\n}"
+					},
+					"cols": []
+				},
+				{
+					"id": "aed1a3f9-cc8e-49d2-b38e-618c481ab883",
+					"name": "sections_uk_03",
+					"mongodb": {
+						"options": "{\nname: \"sections_uk_03\",\nunique: true\n}",
+						"fields": "{\n\"course\": 1,\n\"sectionnumber\": 1,\n\"sectionyear\": 1,\n\"semester\": 1\n}"
+					},
+					"cols": []
+				}
+			],
+			"embeddable": false,
+			"generate": true,
+			"generateCustomCode": true,
+			"customCode": "",
+			"beforeScript": "",
+			"afterScript": "",
+			"validationLevel": "na",
+			"validationAction": "na",
+			"collation": "",
+			"others": "",
+			"size": "",
+			"max": "",
+			"validation": "",
+			"capped": false
+		},
+		"e6c0cc94-66aa-4711-867a-ff34075b99d9": {
+			"id": "e6c0cc94-66aa-4711-867a-ff34075b99d9",
+			"visible": true,
+			"name": "majors",
+			"desc": "",
+			"estimatedSize": "",
+			"cols": [
+				{
+					"id": "faaa6663-0080-49a4-9746-141e6da8d662",
+					"name": "_id",
+					"datatype": "objectId",
+					"param": "",
+					"pk": true,
+					"nn": true,
+					"list": false,
+					"comment": "",
+					"data": "",
+					"enum": "",
+					"validation": "",
+					"pattern": false,
+					"estimatedSize": "",
+					"any": ""
+				},
+				{
+					"id": "6350596a-7ca8-4885-94e4-94964f903cb3",
+					"name": "department",
+					"datatype": "objectId",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"list": false,
+					"comment": "",
+					"data": "",
+					"enum": "",
+					"validation": "",
+					"pattern": false,
+					"estimatedSize": "",
+					"any": "",
+					"fk": true
+				},
+				{
+					"id": "8095c7f8-ec4f-4004-900d-5712058adc08",
+					"name": "name",
+					"datatype": "string",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"list": false,
+					"comment": "",
+					"data": "",
+					"enum": "",
+					"validation": "maxLength: 50",
+					"pattern": false,
+					"estimatedSize": "",
+					"any": ""
+				},
+				{
+					"id": "740c3cb7-24a5-4074-8be0-8d6dd4bdf7c7",
+					"name": "description",
+					"datatype": "string",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"list": false,
+					"comment": "",
+					"data": "",
+					"enum": "",
+					"validation": "maxLength: 80",
+					"pattern": false,
+					"estimatedSize": "",
+					"any": ""
+				},
+				{
+					"id": "cb17b58f-5449-4465-91eb-3c1770a97d00",
+					"name": "students",
+					"datatype": "string",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"list": true,
+					"comment": "",
+					"data": "",
+					"enum": "",
+					"validation": "",
+					"pattern": false,
+					"estimatedSize": "",
+					"any": ""
+				}
+			],
+			"relations": [
+				"f18556f6-59d4-4a47-a4db-a4a4288d3b14",
+				"1cb743ad-63ed-4e11-a9f2-c026cca1f0bb"
+			],
+			"lines": [],
+			"keys": [
+				{
+					"id": "b29bbac0-e3bf-40db-bfcd-6b3688f73e4a",
+					"name": "Primary",
+					"isPk": true,
+					"cols": [
+						{
+							"id": "4f304beb-a385-4392-acf1-ced39bcf9051",
+							"colid": "faaa6663-0080-49a4-9746-141e6da8d662"
+						}
+					]
+				}
+			],
+			"indexes": [
+				{
+					"id": "e0baedac-9313-49e4-856a-92492f9f4fdd",
+					"name": "majors_uk_1",
+					"mongodb": {
+						"options": "{\nname: \"majors_uk_1\",\nunique: true\n}",
+						"fields": "{\n\"name\": 1\n}"
+					},
+					"cols": []
+				}
+			],
+			"embeddable": false,
+			"generate": true,
+			"generateCustomCode": true,
+			"customCode": "",
+			"beforeScript": "",
+			"afterScript": "",
+			"validationLevel": "na",
+			"validationAction": "na",
+			"collation": "",
+			"others": "",
+			"size": "",
+			"max": "",
+			"validation": "",
+			"capped": false
+		},
+		"fe389dff-da62-47f6-be39-fd32a40196af": {
+			"id": "fe389dff-da62-47f6-be39-fd32a40196af",
+			"visible": true,
+			"name": "students",
+			"desc": "",
+			"estimatedSize": "",
+			"cols": [
+				{
+					"id": "c8bf6ade-9649-42ca-9be5-4d76ddc2992c",
+					"name": "_id",
+					"datatype": "objectId",
+					"param": "",
+					"pk": true,
+					"nn": true,
+					"list": false,
+					"comment": "",
+					"data": "",
+					"enum": "",
+					"validation": "",
+					"pattern": false,
+					"estimatedSize": "",
+					"any": ""
+				},
+				{
+					"id": "23f2396a-21f6-428b-abbc-1e45f872b9ba",
+					"name": "lastname",
+					"datatype": "string",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"list": false,
+					"comment": "",
+					"data": "",
+					"enum": "",
+					"validation": "maxLength: 80",
+					"pattern": false,
+					"estimatedSize": "",
+					"any": ""
+				},
+				{
+					"id": "5c23808f-0b3a-4a87-a2d0-0112d8a8921b",
+					"name": "firstname",
+					"datatype": "string",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"list": false,
+					"comment": "",
+					"data": "",
+					"enum": "",
+					"validation": "maxLength: 80",
+					"pattern": false,
+					"estimatedSize": "",
+					"any": ""
+				},
+				{
+					"id": "17251096-726a-4de2-9b09-c329f0a3f9a7",
+					"name": "email",
+					"datatype": "string",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"list": false,
+					"comment": "",
+					"data": "",
+					"enum": "",
+					"validation": "maxLength: 180",
+					"pattern": false,
+					"estimatedSize": "",
+					"any": ""
+				},
+				{
+					"id": "331a29e1-b74d-4905-8b8e-5af871e32ff4",
+					"name": "majors",
+					"datatype": "objectId",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"list": true,
+					"comment": "",
+					"data": "",
+					"enum": "",
+					"validation": "",
+					"pattern": false,
+					"estimatedSize": "",
+					"any": "",
+					"fk": false
+				},
+				{
+					"id": "0759e9e8-0b1b-4e07-96dc-b4d2b7879288",
+					"name": "enrollment",
+					"datatype": "objectId",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"list": true,
+					"comment": "",
+					"data": "",
+					"enum": "",
+					"validation": "",
+					"pattern": false,
+					"estimatedSize": "",
+					"any": ""
+				}
+			],
+			"relations": [
+				"e4a57b7d-84c7-43bb-850b-5e82352f96b5",
+				"41262c05-b5ba-4fae-b7cb-f6468ba25e50"
+			],
+			"lines": [
+				"6bf93e79-5c4d-4ae5-8daf-b5078b85412b"
+			],
+			"keys": [
+				{
+					"id": "1df34026-1185-4d1c-87e1-0036af00925f",
+					"name": "Primary",
+					"isPk": true,
+					"cols": [
+						{
+							"id": "84ef5767-d5ff-43a7-ac98-179035f51bcd",
+							"colid": "c8bf6ade-9649-42ca-9be5-4d76ddc2992c"
+						}
+					]
+				}
+			],
+			"indexes": [
+				{
+					"id": "508dbe1e-f5a6-4645-bbf4-e8b17c7a3f9b",
+					"name": "students_uk_01",
+					"mongodb": {
+						"options": "{\nname: \"students_uk_01\",\nunique: true\n}",
+						"fields": "{\n\"email\": 1\n}"
+					},
+					"cols": []
+				},
+				{
+					"id": "76f8d882-f150-4624-b4df-463ac7c0eaf0",
+					"name": "students_uk_02",
+					"mongodb": {
+						"options": "{\nname: \"students_uk_02\",\nunique: true\n}",
+						"fields": "{\n\"lastname\": 1,\n\"firstname\": 1\n}"
+					},
+					"cols": []
+				}
+			],
+			"embeddable": false,
+			"generate": true,
+			"generateCustomCode": true,
+			"customCode": "",
+			"beforeScript": "",
+			"afterScript": "",
+			"validationLevel": "na",
+			"validationAction": "na",
+			"collation": "",
+			"others": "",
+			"size": "",
+			"max": "",
+			"validation": "",
+			"capped": false
+		},
+		"79bce158-ffc2-4188-b74f-607d0dd4c234": {
+			"id": "79bce158-ffc2-4188-b74f-607d0dd4c234",
+			"visible": true,
+			"name": "enrollment",
+			"desc": "",
+			"estimatedSize": "",
+			"cols": [
+				{
+					"id": "5fe8751c-0e35-4618-b2b2-220c56eb3b18",
+					"name": "_id",
+					"datatype": "objectId",
+					"param": "",
+					"pk": true,
+					"nn": true,
+					"list": false,
+					"comment": "",
+					"data": "",
+					"enum": "",
+					"validation": "",
+					"pattern": false,
+					"estimatedSize": "",
+					"any": ""
+				},
+				{
+					"id": "8000ea34-d73c-45e9-9813-74369e74725a",
+					"name": "students",
+					"datatype": "objectId",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"list": false,
+					"comment": "",
+					"data": "",
+					"enum": "",
+					"validation": "",
+					"pattern": false,
+					"estimatedSize": "",
+					"any": "",
+					"fk": true
+				},
+				{
+					"id": "e121a1a8-d835-4ac0-b974-7bc6bf57b992",
+					"name": "sections",
+					"datatype": "objectId",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"list": false,
+					"comment": "",
+					"data": "",
+					"enum": "",
+					"validation": "",
+					"pattern": false,
+					"estimatedSize": "",
+					"any": "",
+					"fk": true
+				},
+				{
+					"id": "b36f07ab-5aa8-4a55-9d6f-f66b7d48ebf8",
+					"name": "passfail",
+					"datatype": "4ab20d89-e3d9-45ae-8d3a-339168d568ab",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"list": true,
+					"comment": "",
+					"data": "",
+					"enum": "",
+					"validation": "",
+					"pattern": false,
+					"estimatedSize": "",
+					"any": ""
+				},
+				{
+					"id": "49e07c91-37d6-4d98-84e6-cfb67343e9c4",
+					"name": "lettergrade",
+					"datatype": "faa39b96-7489-4a3a-873a-7c9a0f9a850c",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"list": true,
+					"comment": "",
+					"data": "",
+					"enum": "",
+					"validation": "",
+					"pattern": false,
+					"estimatedSize": "",
+					"any": ""
+				}
+			],
+			"relations": [
+				"e4a57b7d-84c7-43bb-850b-5e82352f96b5",
+				"ede643fd-ba27-4ad7-9cc7-d9719af605d2"
+			],
+			"lines": [
+				"6bf93e79-5c4d-4ae5-8daf-b5078b85412b",
+				"a4ee5294-b51c-4117-b68b-7ed278771433"
+			],
+			"keys": [
+				{
+					"id": "2ebdc382-c824-4dca-8cf9-b13f5e6fc7ab",
+					"name": "Primary",
+					"isPk": true,
+					"cols": [
+						{
+							"id": "405cbaf4-2c30-4bd7-909a-918087d442c5",
+							"colid": "5fe8751c-0e35-4618-b2b2-220c56eb3b18"
+						}
+					]
+				}
+			],
+			"indexes": [
+				{
+					"id": "cd99c7cb-cbab-4612-95a3-e0c28c8cfca9",
+					"name": "enrollment_uk_01",
+					"mongodb": {
+						"options": "{\nname: \"enrollment_uk_01\",\nunique: true\n}",
+						"fields": "{\n\"students\": 1,\n\"sections\": 1\n}"
+					},
+					"cols": []
+				}
+			],
+			"embeddable": false,
+			"generate": true,
+			"generateCustomCode": true,
+			"customCode": "",
+			"beforeScript": "",
+			"afterScript": "",
+			"validationLevel": "na",
+			"validationAction": "na",
+			"collation": "",
+			"others": "",
+			"size": "",
+			"max": "",
+			"validation": "",
+			"capped": false
+		},
+		"4ab20d89-e3d9-45ae-8d3a-339168d568ab": {
+			"id": "4ab20d89-e3d9-45ae-8d3a-339168d568ab",
+			"visible": false,
+			"name": "object",
+			"desc": "",
+			"estimatedSize": "",
+			"cols": [
+				{
+					"id": "1b06cfb4-bec0-4fd5-9567-c996b2274b48",
+					"name": "status",
+					"datatype": "enum",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"list": false,
+					"comment": "",
+					"data": "",
+					"enum": "['Pass', 'Fail', 'Withdrawn']",
+					"validation": "",
+					"pattern": false,
+					"estimatedSize": "",
+					"any": ""
+				},
+				{
+					"id": "a6bf3b13-9919-4019-be20-2adc0e29f8ae",
+					"name": "applicationdate",
+					"datatype": "date",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"list": false,
+					"comment": "",
+					"data": "",
+					"enum": "",
+					"validation": "",
+					"pattern": false,
+					"estimatedSize": "",
+					"any": ""
+				}
+			],
+			"relations": [],
+			"lines": [],
+			"keys": [
+				{
+					"id": "05c83333-006e-4a01-a1f8-bb29461c5877",
+					"name": "Primary key",
+					"isPk": true,
+					"cols": []
+				}
+			],
+			"indexes": [],
+			"embeddable": true,
+			"generate": true,
+			"generateCustomCode": true,
+			"customCode": "",
+			"beforeScript": "",
+			"afterScript": "",
+			"validationLevel": "na",
+			"validationAction": "na",
+			"collation": "",
+			"others": "",
+			"size": "",
+			"max": "",
+			"validation": "",
+			"capped": false
+		},
+		"faa39b96-7489-4a3a-873a-7c9a0f9a850c": {
+			"id": "faa39b96-7489-4a3a-873a-7c9a0f9a850c",
+			"visible": false,
+			"name": "object",
+			"desc": "",
+			"estimatedSize": "",
+			"cols": [
+				{
+					"id": "3e65e868-a774-488c-9e50-7c4df51ef73f",
+					"name": "minsatisfactory",
+					"datatype": "enum",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"list": false,
+					"comment": "",
+					"data": "",
+					"enum": "['A', 'B', 'C', 'D', 'F']",
+					"validation": "",
+					"pattern": false,
+					"estimatedSize": "",
+					"any": ""
+				}
+			],
+			"relations": [],
+			"lines": [],
+			"keys": [
+				{
+					"id": "08b24cc0-1c92-4631-935a-870c98020492",
+					"name": "Primary key",
+					"isPk": true,
+					"cols": []
+				}
+			],
+			"indexes": [],
+			"embeddable": true,
+			"generate": true,
+			"generateCustomCode": true,
+			"customCode": "",
+			"beforeScript": "",
+			"afterScript": "",
+			"validationLevel": "na",
+			"validationAction": "na",
+			"collation": "",
+			"others": "",
+			"size": "",
+			"max": "",
+			"validation": "",
+			"capped": false
+		},
+		"efb4fc18-869b-4ca4-b5ef-b9a8c6ce228e": {
+			"id": "efb4fc18-869b-4ca4-b5ef-b9a8c6ce228e",
+			"visible": true,
+			"name": "studentmajor",
+			"desc": "",
+			"estimatedSize": "",
+			"cols": [
+				{
+					"id": "12d9824f-73b6-47f2-bd64-e40bbe894a14",
+					"name": "_id",
+					"datatype": "objectId",
+					"param": "",
+					"pk": true,
+					"nn": true,
+					"list": false,
+					"comment": "",
+					"data": "",
+					"enum": "",
+					"validation": "",
+					"pattern": false,
+					"estimatedSize": "",
+					"any": "",
+					"fk": false
+				},
+				{
+					"id": "ec2449a8-d3e0-4dda-81c7-b2b24f6036d2",
+					"name": "student",
+					"datatype": "objectId",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"list": false,
+					"comment": "",
+					"data": "",
+					"enum": "",
+					"validation": "",
+					"pattern": false,
+					"estimatedSize": "",
+					"any": "",
+					"fk": true
+				},
+				{
+					"id": "9a133fcf-1aca-4b38-a6a2-a7545ab1c30a",
+					"name": "major",
+					"datatype": "objectId",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"list": false,
+					"comment": "",
+					"data": "",
+					"enum": "",
+					"validation": "",
+					"pattern": false,
+					"estimatedSize": "",
+					"any": "",
+					"fk": true
+				},
+				{
+					"id": "7a4178fa-f752-449b-b661-42489ced1509",
+					"name": "declarationdate",
+					"datatype": "date",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"list": false,
+					"comment": "",
+					"data": "",
+					"enum": "",
+					"validation": "",
+					"pattern": false,
+					"estimatedSize": "",
+					"any": ""
+				}
+			],
+			"relations": [
+				"41262c05-b5ba-4fae-b7cb-f6468ba25e50",
+				"1cb743ad-63ed-4e11-a9f2-c026cca1f0bb"
+			],
+			"lines": [],
+			"keys": [
+				{
+					"id": "e8f816d7-7d55-451d-a6f5-4c23ed24613b",
+					"name": "Primary",
+					"isPk": true,
+					"cols": []
+				}
+			],
+			"indexes": [
+				{
+					"id": "0ac351f7-d57b-4389-9b49-76b619c99cfa",
+					"name": "studentmajor_uk_01",
+					"mongodb": {
+						"options": "{\nname: \"studentmajor_uk_01\",\nunique: true\n}",
+						"fields": "{\n\"student\": 1,\n\"major\": 1\n}"
+					},
+					"cols": []
+				}
+			],
+			"embeddable": false,
+			"generate": true,
+			"generateCustomCode": true,
+			"customCode": "",
+			"beforeScript": "",
+			"afterScript": "",
+			"validationLevel": "na",
+			"validationAction": "na",
+			"collation": "",
+			"others": "",
+			"size": "",
+			"max": "",
+			"validation": "",
+			"capped": false
+		}
+	},
+	"relations": {
+		"3723db7c-b9c1-4d5c-8ae0-74b00088b0e3": {
+			"id": "3723db7c-b9c1-4d5c-8ae0-74b00088b0e3",
+			"visible": true,
+			"name": "_id_courses",
+			"desc": "",
+			"type": "identifying",
+			"parent_key": "780e60c2-9bbf-4aac-ad94-0c086b9e9d36",
+			"parent": "788dc565-f243-4de2-bab8-222aaefd65ef",
+			"child": "43d085f9-f05e-4eae-8065-cad50524d7c8",
+			"c_mp": "true",
+			"c_mch": "true",
+			"c_p": "one",
+			"c_ch": "many",
+			"c_cp": "contains",
+			"c_cch": "is contained in",
+			"cols": [
+				{
+					"id": "c18f4d4f-56d9-4e78-b541-07b532e883d6",
+					"parentcol": "84d64450-6a65-46d4-96f4-f709b8587439",
+					"childcol": "1ed7dfc6-90af-4092-bf85-fce1a2776d1d"
+				}
+			],
+			"generate": true,
+			"generateCustomCode": true,
+			"customCode": "",
+			"relationColor": "transparent"
+		},
+		"ee5fd3a5-def2-4839-961b-5f209d95ee39": {
+			"id": "ee5fd3a5-def2-4839-961b-5f209d95ee39",
+			"visible": true,
+			"name": "_id_sections",
+			"desc": "",
+			"type": "identifying",
+			"parent_key": "b5bd1f6d-bb44-4cb0-b49a-1b770b87b01d",
+			"parent": "43d085f9-f05e-4eae-8065-cad50524d7c8",
+			"child": "75c2400a-c5a2-49e7-80e9-cddd904e2d18",
+			"c_mp": "true",
+			"c_mch": "true",
+			"c_p": "one",
+			"c_ch": "many",
+			"c_cp": "offers",
+			"c_cch": "is offered by",
+			"cols": [
+				{
+					"id": "1a1e0c35-deda-4d2d-9fa5-63a210476a71",
+					"parentcol": "f4acb995-7986-4dce-bf3e-9011432b9e68",
+					"childcol": "c68bc9c4-cccc-43ac-a48d-1f474f18d6aa"
+				}
+			],
+			"generate": true,
+			"generateCustomCode": true,
+			"customCode": "",
+			"relationColor": "transparent"
+		},
+		"f18556f6-59d4-4a47-a4db-a4a4288d3b14": {
+			"id": "f18556f6-59d4-4a47-a4db-a4a4288d3b14",
+			"visible": true,
+			"name": "_id_majors",
+			"desc": "",
+			"type": "identifying",
+			"parent_key": "780e60c2-9bbf-4aac-ad94-0c086b9e9d36",
+			"parent": "788dc565-f243-4de2-bab8-222aaefd65ef",
+			"child": "e6c0cc94-66aa-4711-867a-ff34075b99d9",
+			"c_mp": "true",
+			"c_mch": "true",
+			"c_p": "one",
+			"c_ch": "many",
+			"c_cp": "includes",
+			"c_cch": "is included of",
+			"cols": [
+				{
+					"id": "64869a8b-4864-4aad-a4cb-188733f0ab0f",
+					"parentcol": "84d64450-6a65-46d4-96f4-f709b8587439",
+					"childcol": "6350596a-7ca8-4885-94e4-94964f903cb3"
+				}
+			],
+			"generate": true,
+			"generateCustomCode": true,
+			"customCode": "",
+			"relationColor": "transparent"
+		},
+		"e4a57b7d-84c7-43bb-850b-5e82352f96b5": {
+			"id": "e4a57b7d-84c7-43bb-850b-5e82352f96b5",
+			"visible": true,
+			"name": "_id_students",
+			"desc": "",
+			"type": "identifying",
+			"parent_key": "1df34026-1185-4d1c-87e1-0036af00925f",
+			"parent": "fe389dff-da62-47f6-be39-fd32a40196af",
+			"child": "79bce158-ffc2-4188-b74f-607d0dd4c234",
+			"c_mp": "true",
+			"c_mch": "true",
+			"c_p": "one",
+			"c_ch": "many",
+			"c_cp": "enrolls in",
+			"c_cch": "is enrolled in",
+			"cols": [
+				{
+					"id": "3d761478-0bc9-4bac-bc20-7ba97ffe1e0f",
+					"parentcol": "c8bf6ade-9649-42ca-9be5-4d76ddc2992c",
+					"childcol": "8000ea34-d73c-45e9-9813-74369e74725a"
+				}
+			],
+			"generate": true,
+			"generateCustomCode": true,
+			"customCode": "",
+			"relationColor": "transparent"
+		},
+		"ede643fd-ba27-4ad7-9cc7-d9719af605d2": {
+			"id": "ede643fd-ba27-4ad7-9cc7-d9719af605d2",
+			"visible": true,
+			"name": "_id_sections",
+			"desc": "",
+			"type": "identifying",
+			"parent_key": "df486755-38ae-4063-8095-8fbb7cd05ec9",
+			"parent": "75c2400a-c5a2-49e7-80e9-cddd904e2d18",
+			"child": "79bce158-ffc2-4188-b74f-607d0dd4c234",
+			"c_mp": "true",
+			"c_mch": "true",
+			"c_p": "one",
+			"c_ch": "many",
+			"c_cp": "enrolls in",
+			"c_cch": "is enrolled in",
+			"cols": [
+				{
+					"id": "9e4b1916-138b-426f-803a-562f9e8c526b",
+					"parentcol": "8ea90fca-b916-4443-84fd-c0965b5a79c6",
+					"childcol": "e121a1a8-d835-4ac0-b974-7bc6bf57b992"
+				}
+			],
+			"generate": true,
+			"generateCustomCode": true,
+			"customCode": "",
+			"relationColor": "transparent"
+		},
+		"41262c05-b5ba-4fae-b7cb-f6468ba25e50": {
+			"id": "41262c05-b5ba-4fae-b7cb-f6468ba25e50",
+			"visible": true,
+			"name": "_id_student",
+			"desc": "",
+			"type": "identifying",
+			"parent_key": "1df34026-1185-4d1c-87e1-0036af00925f",
+			"parent": "fe389dff-da62-47f6-be39-fd32a40196af",
+			"child": "efb4fc18-869b-4ca4-b5ef-b9a8c6ce228e",
+			"c_mp": "true",
+			"c_mch": "true",
+			"c_p": "one",
+			"c_ch": "many",
+			"c_cp": "declares",
+			"c_cch": "is declared in",
+			"cols": [
+				{
+					"id": "ee246353-b078-4421-84e8-11d3de835aa1",
+					"parentcol": "c8bf6ade-9649-42ca-9be5-4d76ddc2992c",
+					"childcol": "ec2449a8-d3e0-4dda-81c7-b2b24f6036d2"
+				}
+			],
+			"generate": true,
+			"generateCustomCode": true,
+			"customCode": "",
+			"relationColor": "transparent"
+		},
+		"1cb743ad-63ed-4e11-a9f2-c026cca1f0bb": {
+			"id": "1cb743ad-63ed-4e11-a9f2-c026cca1f0bb",
+			"visible": true,
+			"name": "_id_major",
+			"desc": "",
+			"type": "identifying",
+			"parent_key": "b29bbac0-e3bf-40db-bfcd-6b3688f73e4a",
+			"parent": "e6c0cc94-66aa-4711-867a-ff34075b99d9",
+			"child": "efb4fc18-869b-4ca4-b5ef-b9a8c6ce228e",
+			"c_mp": "true",
+			"c_mch": "true",
+			"c_p": "one",
+			"c_ch": "many",
+			"c_cp": "declares",
+			"c_cch": "is declared in",
+			"cols": [
+				{
+					"id": "e84e68fd-dcb0-4a71-a5ba-d01010c33352",
+					"parentcol": "faaa6663-0080-49a4-9746-141e6da8d662",
+					"childcol": "9a133fcf-1aca-4b38-a6a2-a7545ab1c30a"
+				}
+			],
+			"generate": true,
+			"generateCustomCode": true,
+			"customCode": "",
+			"relationColor": "transparent"
+		}
+	},
+	"notes": {},
+	"lines": {
+		"6bf93e79-5c4d-4ae5-8daf-b5078b85412b": {
+			"id": "6bf93e79-5c4d-4ae5-8daf-b5078b85412b",
+			"visible": true,
+			"name": "enrollment-enrollment",
+			"desc": "",
+			"style": "solid",
+			"parent": "fe389dff-da62-47f6-be39-fd32a40196af",
+			"child": "79bce158-ffc2-4188-b74f-607d0dd4c234",
+			"parentTableColId": "0759e9e8-0b1b-4e07-96dc-b4d2b7879288",
+			"childTableColId": "",
+			"lineColor": "#9c27b0",
+			"markerStart": "none",
+			"markerEnd": "arrowEnd",
+			"linegraphics": "default",
+			"generate": true,
+			"code": "",
+			"caption": ""
+		},
+		"a4ee5294-b51c-4117-b68b-7ed278771433": {
+			"id": "a4ee5294-b51c-4117-b68b-7ed278771433",
+			"visible": true,
+			"name": "enrollment-enrollment",
+			"desc": "",
+			"style": "solid",
+			"parent": "75c2400a-c5a2-49e7-80e9-cddd904e2d18",
+			"child": "79bce158-ffc2-4188-b74f-607d0dd4c234",
+			"parentTableColId": "3e1d1194-5763-479a-a5da-eee513fa0b11",
+			"childTableColId": "",
+			"lineColor": "#9c27b0",
+			"markerStart": "none",
+			"markerEnd": "arrowEnd",
+			"linegraphics": "default",
+			"generate": true,
+			"code": "",
+			"caption": ""
+		},
+		"4a4e9c03-0c7d-47b1-9369-38cc2c7b1de0": {
+			"id": "4a4e9c03-0c7d-47b1-9369-38cc2c7b1de0",
+			"visible": true,
+			"name": "sections-sections",
+			"desc": "",
+			"style": "solid",
+			"parent": "43d085f9-f05e-4eae-8065-cad50524d7c8",
+			"child": "75c2400a-c5a2-49e7-80e9-cddd904e2d18",
+			"parentTableColId": "6ead57db-c4cc-4679-aa57-e423ae18d875",
+			"childTableColId": "",
+			"lineColor": "#9c27b0",
+			"markerStart": "none",
+			"markerEnd": "arrowEnd",
+			"linegraphics": "default",
+			"generate": true,
+			"code": "",
+			"caption": ""
+		},
+		"4165c781-5392-47a0-b7ba-8ad34893f168": {
+			"id": "4165c781-5392-47a0-b7ba-8ad34893f168",
+			"visible": true,
+			"name": "courses-courses",
+			"desc": "",
+			"style": "solid",
+			"parent": "788dc565-f243-4de2-bab8-222aaefd65ef",
+			"child": "43d085f9-f05e-4eae-8065-cad50524d7c8",
+			"parentTableColId": "b04d9cdd-47a7-474d-bab5-260cf53d0fa3",
+			"childTableColId": "",
+			"lineColor": "#9c27b0",
+			"markerStart": "none",
+			"markerEnd": "arrowEnd",
+			"linegraphics": "default",
+			"generate": true,
+			"code": "",
+			"caption": ""
+		}
+	},
+	"model": {
+		"name": "Enrollment Term Project",
+		"id": "a55785d8-c776-4f43-9e2f-c9423c365614",
+		"activeDiagram": "dd43c5b4-ee4e-4f24-ab9d-84e848f173e2",
+		"desc": "",
+		"path": "",
+		"type": "MONGODB",
+		"version": 1,
+		"parentTableInFkCols": true,
+		"caseConvention": "under",
+		"replaceSpace": "_",
+		"color": "transparent",
+		"sideSelections": true,
+		"isDirty": true,
+		"storedin": {
+			"major": 8,
+			"minor": 0,
+			"extra": 0
+		},
+		"laststoredin": {
+			"major": 8,
+			"minor": 5,
+			"extra": 1
+		},
+		"writeFileParam": false,
+		"authorName": "",
+		"companyDetails": "",
+		"companyUrl": "",
+		"def_coltopk": true,
+		"def_validationLevel": "na",
+		"def_validationAction": "na",
+		"def_collation": "",
+		"def_others": "",
+		"connectionVersion": "",
+		"lastSaved": 1715052723554
+	},
+	"otherObjects": {},
+	"diagrams": {
+		"dd43c5b4-ee4e-4f24-ab9d-84e848f173e2": {
+			"name": "Main Diagram",
+			"description": "",
+			"id": "dd43c5b4-ee4e-4f24-ab9d-84e848f173e2",
+			"keysgraphics": true,
+			"linegraphics": "detailed",
+			"zoom": 0.7,
+			"background": "transparent",
+			"lineColor": "transparent",
+			"isOpen": true,
+			"main": true,
+			"diagramItems": {
+				"788dc565-f243-4de2-bab8-222aaefd65ef": {
+					"referencedItemId": "788dc565-f243-4de2-bab8-222aaefd65ef",
+					"x": 1699,
+					"y": 485,
+					"gHeight": 254,
+					"gWidth": 217,
+					"color": "#ffffff",
+					"background": "#03a9f4",
+					"resized": false,
+					"autoExpand": true,
+					"backgroundOpacity": "10",
+					"collapsed": false
+				},
+				"43d085f9-f05e-4eae-8065-cad50524d7c8": {
+					"referencedItemId": "43d085f9-f05e-4eae-8065-cad50524d7c8",
+					"x": 1226,
+					"y": 606,
+					"gHeight": 200,
+					"gWidth": 225,
+					"color": "#ffffff",
+					"background": "#03a9f4",
+					"resized": false,
+					"autoExpand": true,
+					"backgroundOpacity": "10",
+					"collapsed": false
+				},
+				"75c2400a-c5a2-49e7-80e9-cddd904e2d18": {
+					"referencedItemId": "75c2400a-c5a2-49e7-80e9-cddd904e2d18",
+					"x": 552,
+					"y": 544,
+					"gHeight": 290,
+					"gWidth": 226,
+					"color": "#ffffff",
+					"background": "#03a9f4",
+					"resized": false,
+					"autoExpand": true,
+					"backgroundOpacity": "10",
+					"collapsed": false
+				},
+				"e6c0cc94-66aa-4711-867a-ff34075b99d9": {
+					"referencedItemId": "e6c0cc94-66aa-4711-867a-ff34075b99d9",
+					"x": 1225,
+					"y": 313,
+					"gHeight": 146,
+					"gWidth": 225,
+					"color": "#ffffff",
+					"background": "#03a9f4",
+					"resized": false,
+					"autoExpand": true,
+					"backgroundOpacity": "10",
+					"collapsed": false
+				},
+				"fe389dff-da62-47f6-be39-fd32a40196af": {
+					"referencedItemId": "fe389dff-da62-47f6-be39-fd32a40196af",
+					"x": 553,
+					"y": 311,
+					"gHeight": 182,
+					"gWidth": 226,
+					"color": "#ffffff",
+					"background": "#03a9f4",
+					"resized": false,
+					"autoExpand": true,
+					"backgroundOpacity": "10",
+					"collapsed": false
+				},
+				"79bce158-ffc2-4188-b74f-607d0dd4c234": {
+					"referencedItemId": "79bce158-ffc2-4188-b74f-607d0dd4c234",
+					"x": 50,
+					"y": 452,
+					"gHeight": 200,
+					"gWidth": 228,
+					"color": "#ffffff",
+					"background": "#03a9f4",
+					"resized": false,
+					"autoExpand": true,
+					"backgroundOpacity": "10",
+					"collapsed": false
+				},
+				"4ab20d89-e3d9-45ae-8d3a-339168d568ab": {
+					"referencedItemId": "4ab20d89-e3d9-45ae-8d3a-339168d568ab",
+					"x": -1,
+					"y": -1,
+					"gHeight": -1,
+					"gWidth": -1,
+					"color": "#ffffff",
+					"background": "transparent",
+					"resized": false,
+					"autoExpand": true,
+					"backgroundOpacity": "10",
+					"collapsed": false
+				},
+				"faa39b96-7489-4a3a-873a-7c9a0f9a850c": {
+					"referencedItemId": "faa39b96-7489-4a3a-873a-7c9a0f9a850c",
+					"x": -1,
+					"y": -1,
+					"gHeight": -1,
+					"gWidth": -1,
+					"color": "#ffffff",
+					"background": "transparent",
+					"resized": false,
+					"autoExpand": true,
+					"backgroundOpacity": "10",
+					"collapsed": false
+				},
+				"efb4fc18-869b-4ca4-b5ef-b9a8c6ce228e": {
+					"referencedItemId": "efb4fc18-869b-4ca4-b5ef-b9a8c6ce228e",
+					"x": 898,
+					"y": 119,
+					"gHeight": 128,
+					"gWidth": 228,
+					"color": "#ffffff",
+					"background": "#03a9f4",
+					"resized": false,
+					"autoExpand": true,
+					"backgroundOpacity": "10",
+					"collapsed": false
+				}
+			},
+			"scroll": {
+				"x": 0,
+				"y": 0
+			},
+			"type": "erd",
+			"showHorizontal": true,
+			"showDescriptions": true,
+			"showIndicators": true,
+			"showProgress": true,
+			"lineWidth": "2",
+			"boxSize": "0",
+			"boxSpacing": "2",
+			"boxAlign": "center",
+			"showIndicatorCaptions": true,
+			"showEstimatedSize": false,
+			"showSchemaContainer": true,
+			"showEmbeddedInParents": true,
+			"showCardinalityCaptions": true,
+			"showRelationshipNames": false,
+			"showLineCaptions": false,
+			"showColumns": true,
+			"showColumnDataTypes": true,
+			"showSampleData": false,
+			"showTableIndexes": true,
+			"showTableDescriptions": true,
+			"showRelations": true,
+			"backgroundImage": "na",
+			"descriptionsColor": "transparent",
+			"embeddedSpacing": "2",
+			"showMainIcon": true,
+			"showLabels": true,
+			"showCustomizations": false
+		}
+	},
+	"diagramsOrder": [],
+	"order": [],
+	"collapsedTreeItems": [],
+	"reverseStats": {}
+}
